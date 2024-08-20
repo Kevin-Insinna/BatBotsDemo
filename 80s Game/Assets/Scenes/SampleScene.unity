@@ -5260,6 +5260,7 @@ MonoBehaviour:
   - {fileID: 454436789}
   postProcessVolume: {fileID: 1156324655}
   onboardingUI: {fileID: 0}
+  pauseScreenUI: {fileID: 0}
   titleScreenUI: {fileID: 0}
   scoreBehavior: {fileID: 0}
   backgroundUI: {fileID: 0}
@@ -9262,9 +9263,19 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1270203348}
     m_Modifications:
+    - target: {fileID: 3528782434701058315, guid: b2f57f57c7157104c83ab6c5c212758d, type: 3}
+      propertyPath: m_text
+      value: '1500 Pts
+
+        Drops Power Core '
+      objectReference: {fileID: 0}
     - target: {fileID: 3732423395303696782, guid: b2f57f57c7157104c83ab6c5c212758d, type: 3}
       propertyPath: m_Name
       value: Pausescreen Onboarding Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832646424251504327, guid: b2f57f57c7157104c83ab6c5c212758d, type: 3}
+      propertyPath: m_text
+      value: Drops Debuff Core
       objectReference: {fileID: 0}
     - target: {fileID: 9102505709638824390, guid: b2f57f57c7157104c83ab6c5c212758d, type: 3}
       propertyPath: m_Pivot.x

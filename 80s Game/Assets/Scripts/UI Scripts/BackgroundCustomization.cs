@@ -231,7 +231,7 @@ public class BackgroundCustomization : MonoBehaviour
                 switch(selectedCompetitiveBackground)
                 {
                     case 0:
-                        return false;
+                        return true;
                     case 1:
                         return !AchievementManager.GetAchievementByKey("classic-1").isUnlocked();
                     case 2:
@@ -245,7 +245,7 @@ public class BackgroundCustomization : MonoBehaviour
                 switch(selectedDefenseBackground)
                 {
                     case 0:
-                        return false;
+                        return true;
                     case 1:
                         return !AchievementManager.GetAchievementByKey("def-1").isUnlocked();
                     case 2:

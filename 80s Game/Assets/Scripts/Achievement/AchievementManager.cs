@@ -85,7 +85,7 @@ public static class AchievementManager
     /// <param name="name">The key of the achievement to unlock. Will get saved to PlayerPrefs</param>
     public static void UnlockAchievement(string name)
     {
-        
+        /*
         if (HasBeenUnlocked(name))
         {
             return;
@@ -95,7 +95,7 @@ public static class AchievementManager
         GameManager.Instance.UIManager.EnqueueAchievementNotification(GetAchievementByKey(name));
         PlayerPrefs.SetInt(name , 1);
         rewards.Enqueue(name);
-        TestForPlat();
+        TestForPlat();*/
     }
 
     /// <summary>
@@ -124,7 +124,7 @@ public static class AchievementManager
         }
 
         if (plat) {
-            UnlockAchievement(AchievementConstants.EMPLOYEE_OF_THE_MONTH);
+            //UnlockAchievement(AchievementConstants.EMPLOYEE_OF_THE_MONTH);
         }
     }
 
@@ -345,10 +345,10 @@ public static class AchievementManager
     /// <param name="testType">Which type of test to use</param>
     private static void TestAndUnlock(string key, int expected, int actual, TestType testType)
     {
-        if (TestUnlock(testType, expected, actual))
+        /*if (TestUnlock(testType, expected, actual))
         {
             UnlockAchievement(key);
-        }
+        }*/
     }
 
     /// <summary>
@@ -377,7 +377,7 @@ public static class AchievementManager
         string key = AchievementConstants.UNFAZED;
         if (TestUnlock(TestType.GreaterThanOrEqual, requirements[key], confusionCount+1))
         {
-            UnlockAchievement(key);
+            //UnlockAchievement(key);
             return;
         }
         RegisterData("confmod-pi-" + stunningPlayerOrder.ToString(), confusionCount + 1);
@@ -404,7 +404,7 @@ public static class AchievementManager
         fullyChargedByPlayer[player]++;
         if (TestUnlock(TestType.GreaterThanOrEqual, requirements[AchievementConstants.FULLY_CHARGED], fullyChargedByPlayer[player]))
         {
-            UnlockAchievement(AchievementConstants.FULLY_CHARGED);
+            //UnlockAchievement(AchievementConstants.FULLY_CHARGED);
         }
     }
 
@@ -422,7 +422,7 @@ public static class AchievementManager
             countingUnstable = false;
             if(TestUnlock(TestType.GreaterThanOrEqual, requirements[AchievementConstants.GREASED_LIGHTNING], unstableCount))
             {
-                UnlockAchievement(AchievementConstants.GREASED_LIGHTNING);
+                //UnlockAchievement(AchievementConstants.GREASED_LIGHTNING);
             }
             counterOrigin = null;
         }
@@ -442,7 +442,7 @@ public static class AchievementManager
             countingUnstable = false;
             if(TestUnlock(TestType.GreaterThanOrEqual, requirements[AchievementConstants.GREASED_LIGHTNING], unstableCount))
             {
-                UnlockAchievement(AchievementConstants.GREASED_LIGHTNING);
+                //UnlockAchievement(AchievementConstants.GREASED_LIGHTNING);
             }
             counterDefenseOrigin = null;
         }

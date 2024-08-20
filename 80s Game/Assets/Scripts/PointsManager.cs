@@ -138,6 +138,10 @@ public class PointsManager : MonoBehaviour
         // Sort the leaderboard based on score
         records.Sort((record1, record2) => record1.score.CompareTo(record2.score));
         string initials = PlayerData.activePlayers[maxScoringPlayer].initials;
+        if (initials == null)
+        {
+            initials = "AAA";
+        }
 
         // If file contains scores,
         // iterate through the records to compare new score
