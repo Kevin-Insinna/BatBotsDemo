@@ -31,7 +31,7 @@ public class PlayerInputWrapper : MonoBehaviour
 
     private void Start()
     {
-        joycons = JoyconManager.Instance.j;
+        //joycons = JoyconManager.Instance.j;
         player = GetComponent<PlayerController>();
         playerInput = GetComponent<PlayerInput>();
         if (playerInput.currentControlScheme == "KnM")
@@ -57,11 +57,11 @@ public class PlayerInputWrapper : MonoBehaviour
             sensitivity = controllerSensitivity;
         } 
         
-        else if (joycons.Count > 0)
+        /*else if (joycons.Count > 0)
         {
             joycons[player.Order].SetRumble(0, 0, 0);
             sensitivity = controllerSensitivity;
-        }
+        }*/
 
         else
         {
@@ -219,7 +219,7 @@ public class PlayerInputWrapper : MonoBehaviour
     public void Update()
     {
         // make sure the Joycon only gets checked if attached
-        if (joycons.Count > 0)
+        /*if (joycons.Count > 0)
         {
             Joycon j = joycons[player.Order-1];
 
@@ -245,7 +245,7 @@ public class PlayerInputWrapper : MonoBehaviour
             {
                 OnPause();
             }
-        }
+        }*/
 
         //Increase delay between shots
         currentDelay += Time.deltaTime;
